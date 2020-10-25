@@ -1,4 +1,5 @@
 from .models import Users, user_table, engine
+from config import logger
 import discord
 from discord.ext import commands
 
@@ -11,7 +12,7 @@ class User(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        print(1)
+        logger.info("User is ready")
 
     @commands.command()
     async def info(self, ctx):
