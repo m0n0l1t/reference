@@ -1,0 +1,14 @@
+[Unit]
+Description=Discord Bot
+After=network.target
+
+[Service]
+User=root
+Group=root
+
+WorkingDirectory=/root/reference/
+Environment="PYTHONPATH=/root/reference/"
+ExecStart=/root/reference/venv/bin/python /root/reference/main.py
+
+[Install]
+WantedBy=multi-user.target
